@@ -78,6 +78,7 @@ function Dashboard() {
                             <TableCell><strong>Subject</strong></TableCell>
                             <TableCell><strong>Marks</strong></TableCell>
                             <TableCell><strong>Actions</strong></TableCell>
+                            <TableCell><strong>Remove</strong></TableCell>    
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -93,7 +94,12 @@ function Dashboard() {
                                     <Link to={`/update-result/${result.roll_number}`}>
                                         <Button variant="contained" color="primary" size="small" sx={{ borderRadius: 2, minWidth: 50,px:1,textTransform: "none" }}>Edit</Button>
                                     </Link>
-                                </TableCell>
+                                    </TableCell>
+                                    <TableCell>
+                                    <Link to={`/delete-result/${result.roll_number}`}>
+                                        <Button variant="contained" color="error" size="small" sx={{ borderRadius: 2, minWidth: 50,px:1,textTransform: "none" }}>Delete</Button>
+                                        </Link>
+                                    </TableCell>
                             </TableRow>
                         ))
                     ) :(

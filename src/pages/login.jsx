@@ -20,7 +20,7 @@ function Login() {
             console.log(response.data);
             if (response.data.success) {
                 localStorage.setItem("auth", response.data.token);
-                navigate('/');
+                window.location.href = '/'; 
             }
             else {
                 setError('Invalid Credentials');
@@ -53,7 +53,7 @@ function Login() {
                 onChange={handleChange}
                 sx={{ mb: 2 }}
             />
-                <Button varient="contained" type="submit" >Login</Button>
+                <Button variant="contained" type="submit" >Login</Button>
             </form>
         </Container>
     );
